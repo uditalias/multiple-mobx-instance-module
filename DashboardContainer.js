@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { observer, inject } from "mobx-react";
 
+@observer
 @inject(stores => ({
     dashboardStore: stores.dashboardStore
 }))
-@observer
 export default class DashboardContainer extends Component {
     changeSelectedTab = (e) => {
         const { dashboardStore } = this.props;
