@@ -1,17 +1,11 @@
 import { observable, action } from "mobx";
 
 export default class DashboardStore {
-    @observable selectedTab;
+    @observable
+    selectedTab = "main";
 
-    constructor() {
-        this.reset();
-    }
-
-    @action reset() {
-        this.selectedTab = "main";
-    }
-
-    @action setSelectedTab(tab) {
+    @action
+    setSelectedTab(tab) {
         this.selectedTab = tab;
     }
 }
